@@ -29,6 +29,7 @@ class AppFlowyBoardConfig {
     this.boardCornerRadius = 6.0,
     this.groupCornerRadius = 6.0,
     this.groupBackgroundColor = Colors.transparent,
+    this.groupBorderColor = Colors.transparent,
     this.groupMargin = const EdgeInsets.symmetric(horizontal: 8),
     this.groupHeaderPadding = const EdgeInsets.symmetric(horizontal: 16),
     this.groupBodyPadding = const EdgeInsets.symmetric(horizontal: 12),
@@ -43,6 +44,7 @@ class AppFlowyBoardConfig {
   // group
   final double groupCornerRadius;
   final Color groupBackgroundColor;
+  final Color groupBorderColor;
   final EdgeInsets groupMargin;
   final EdgeInsets groupHeaderPadding;
   final EdgeInsets groupBodyPadding;
@@ -296,6 +298,7 @@ class _AppFlowyBoardContentState extends State<_AppFlowyBoardContent> {
                 onReorder: widget.boardController.moveGroupItem,
                 cornerRadius: widget.config.groupCornerRadius,
                 backgroundColor: widget.config.groupBackgroundColor,
+                borderColor: widget.config.groupBorderColor,
                 dragStateStorage: widget.boardState,
                 dragTargetKeys: widget.boardState,
                 reorderFlexAction: reorderFlexAction,

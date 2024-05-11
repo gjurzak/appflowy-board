@@ -80,6 +80,7 @@ class AppFlowyBoardGroup extends StatefulWidget {
     this.bodyPadding = EdgeInsets.zero,
     this.cornerRadius = 0.0,
     this.backgroundColor = Colors.transparent,
+    this.borderColor = Colors.transparent,
     this.stretchGroupHeight = true,
   }) : config = const ReorderFlexConfig();
 
@@ -101,6 +102,7 @@ class AppFlowyBoardGroup extends StatefulWidget {
   final EdgeInsets bodyPadding;
   final double cornerRadius;
   final Color backgroundColor;
+  final Color borderColor;
   final bool stretchGroupHeight;
   final ReorderFlexConfig config;
 
@@ -180,6 +182,7 @@ class _AppFlowyBoardGroupState extends State<AppFlowyBoardGroup> {
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
             color: widget.backgroundColor,
+            border: Border.all(color: widget.borderColor),
             borderRadius: BorderRadius.circular(widget.cornerRadius),
           ),
           child: Flex(
